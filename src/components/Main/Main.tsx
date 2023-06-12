@@ -1,10 +1,10 @@
 import styles from './Main.module.scss';
-import TodoList from '../TodoList/TodoList';
+import Todo from '../Todo';
 
 const Main = () => {
   return (
     <div className={styles.main}>
-      <TodoList />
+      <Todo />
     </div>
   );
 };
