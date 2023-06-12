@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  min-height: 50px;
+  background-color: #e7e7e7;
+
+  &__title {
+    font-weight:200;
+    color: rgb(246, 105, 105);
+  }
+}
