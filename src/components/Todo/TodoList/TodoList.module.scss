@@ -9,8 +9,8 @@
     border: 1px solid #50514f;
     overflow: hidden;
 
-    &:not(:first-child) {
-      border-top: none;
+    &_hide {
+      display: none;
     }
   }
 
@@ -48,7 +48,6 @@
       background-color: transparent;
       border-radius: 50%;
       border: 1px solid #50514f;
-
     }
   }
 
@@ -63,6 +62,6 @@
   .todolist__checkbox:checked + .todolist__label {
     transition: 0.15s ease-in-out;
     text-decoration: line-through;
-    color: #b4b4b4
+    color: #b4b4b4;
   }
 }

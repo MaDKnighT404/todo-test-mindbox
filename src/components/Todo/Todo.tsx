@@ -10,7 +10,7 @@ const Todo = () => {
   return (
     <div className={styles.todo}>
       <TodoForm todos={todos} setTodos={setTodos} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
 };
