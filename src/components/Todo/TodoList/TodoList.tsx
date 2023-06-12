@@ -18,7 +18,7 @@ const TodoList: FC<TodoListProps> = ({ todos }) => {
               id={`customCheckbox${i + 1}`}
             />
             <label className={styles.todolist__label} htmlFor={`customCheckbox${i + 1}`}>
-              {el.value}
+              <span> {el.value}</span>
             </label>
           </li>
         ))}

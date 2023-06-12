@@ -33,9 +33,9 @@
       position: absolute;
       left: -16px;
       top: 15px;
-      color: green;
+      color: #2ea82e;
       opacity: 0;
-      transition: opacity 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
     }
 
     &::after {
@@ -48,10 +48,21 @@
       background-color: transparent;
       border-radius: 50%;
       border: 1px solid #50514f;
+
     }
   }
 
   .todolist__checkbox:checked + .todolist__label::before {
     opacity: 1;
+  }
+
+  .todolist__checkbox:checked + .todolist__label::after {
+    border: 1px solid #2ea82e;
+  }
+
+  .todolist__checkbox:checked + .todolist__label {
+    transition: 0.15s ease-in-out;
+    text-decoration: line-through;
+    color: #b4b4b4
   }
 }
