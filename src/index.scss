@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
 
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,6 +14,7 @@ a {
   color: inherit;
 }
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+ul {
+  list-style: none;
 }
+

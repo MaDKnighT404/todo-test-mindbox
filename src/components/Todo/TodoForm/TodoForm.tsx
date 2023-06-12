@@ -1,10 +1,10 @@
 import { FC, ChangeEvent, FormEvent, useState } from 'react';
-import { Todo } from '../../../types';
+import { TodoElement } from '../../../types';
 import styles from './TodoForm.module.scss';
 
 interface TodoFormProps {
-  todos: Todo[];
-  setTodos: (todos: Todo[]) => void;
+  todos: TodoElement[];
+  setTodos: (todos: TodoElement[]) => void;
 }
 
 const TodoForm: FC<TodoFormProps> = ({ todos, setTodos }) => {
@@ -13,6 +13,7 @@ const TodoForm: FC<TodoFormProps> = ({ todos, setTodos }) => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!input) return;
 
     const newTodo = {
       value: input,

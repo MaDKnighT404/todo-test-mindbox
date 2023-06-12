@@ -1,4 +1,4 @@
-export interface Todo {
+export interface TodoElement {
   value: string;
   id: number;
   isChecked: boolean;
