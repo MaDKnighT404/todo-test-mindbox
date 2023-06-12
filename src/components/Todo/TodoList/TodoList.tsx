@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { TodoElement } from '../../../types';
+import TodoOptions from '../TodoOptions';
+import { TodoObject } from '../../../types';
 import styles from './TodoList.module.scss';
 
 interface TodoListProps {
-  todos: TodoElement[];
+  todos: TodoObject[];
 }
 
 const TodoList: FC<TodoListProps> = ({ todos }) => {
@@ -11,7 +12,7 @@ const TodoList: FC<TodoListProps> = ({ todos }) => {
     <div className={styles.todolist}>
       <ul>
         {todos.map((el, i) => (
-          <li className={styles.todolist__item}>
+          <li className={styles.todolist__item} key={el.id}>
             <input
               className={styles.todolist__checkbox}
               type="checkbox"
@@ -23,6 +24,7 @@ const TodoList: FC<TodoListProps> = ({ todos }) => {
           </li>
         ))}
       </ul>
+      <TodoOptions todos={todos} />
     </div>
   );
 };

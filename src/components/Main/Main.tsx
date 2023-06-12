@@ -3,9 +3,9 @@ import Todo from '../Todo';
 
 const Main = () => {
   return (
-    <div className={styles.main}>
+    <main className={styles.main}>
       <Todo />
-    </div>
+    </main>
   );
 };
 

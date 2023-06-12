@@ -1,10 +1,10 @@
 import { FC, ChangeEvent, FormEvent, useState } from 'react';
-import { TodoElement } from '../../../types';
+import { TodoObject } from '../../../types';
 import styles from './TodoForm.module.scss';
 
 interface TodoFormProps {
-  todos: TodoElement[];
-  setTodos: (todos: TodoElement[]) => void;
+  todos: TodoObject[];
+  setTodos: (todos: TodoObject[]) => void;
 }
 
 const TodoForm: FC<TodoFormProps> = ({ todos, setTodos }) => {
@@ -37,10 +37,9 @@ const TodoForm: FC<TodoFormProps> = ({ todos, setTodos }) => {
         type="text"
         name="text"
         value={input}
-        placeholder="type your task here!"
+        placeholder="What's need to be done?"
         onChange={handleInputChange}
       />
-      <button className="todo__submit">Add todo</button>
     </form>
   );
 };

@@ -1,6 +1,14 @@
 .todo__form {
+  position: relative;
+  &::before {
+    content: url(../../../assets/arrow.svg);
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    z-index: 10;
+  }
 
-  &__input {
+  .todo__input {
     position: relative;
     width: 300px;
     font-size: 1.2rem;
@@ -9,5 +17,9 @@
     border: 0;
     border-radius: 5px;
     text-indent: 20px;
+
+    &::placeholder {
+      color: rgb(155, 155, 155);
+    }
   }
 }

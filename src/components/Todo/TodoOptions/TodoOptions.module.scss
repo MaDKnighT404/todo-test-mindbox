@@ -1,0 +1,42 @@
+.todo__options {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #50514f;
+  border-top: 0;
+
+  .todo__items-left {
+    font-size: 14px;
+    line-height: 28px;
+    user-select: none;
+  }
+
+  .sort-menu {
+    display: flex;
+    gap: 5px;
+
+    &__item {
+      cursor: pointer;
+    }
+
+    &__btn {
+      padding: 5px;
+      background: transparent;
+      border: 0;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      &-active {
+        border: 1px solid red;
+      }
+    }
+  }
+
+  .todo__clear-btn {
+    padding: 5px;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
