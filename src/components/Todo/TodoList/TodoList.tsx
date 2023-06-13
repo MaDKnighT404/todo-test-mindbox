@@ -22,8 +22,8 @@ const TodoList: FC<TodoListProps> = ({ todos, setTodos }) => {
   };
 
   return (
-    <div className={styles.todolist}>
-      <ul>
+    <div className={styles['todolist-wrapper']}>
+      <ul className={styles.todolist} data-testid='todo-list'>
         {todos.length >= 1 ? (
           todos.map((el, i) => (
             <li
@@ -50,7 +50,7 @@ const TodoList: FC<TodoListProps> = ({ todos, setTodos }) => {
             </li>
           ))
         ) : (
-          <li className={styles.todolist__item_empty}>Todo list is empty! Try added something </li>
+          <li className={styles.todolist__item_empty}>Todo list is empty! Try added something</li>
         )}
       </ul>
       <TodoOptions

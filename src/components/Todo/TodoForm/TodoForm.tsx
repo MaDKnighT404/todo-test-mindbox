@@ -9,7 +9,7 @@ interface TodoFormProps {
 
 const TodoForm: FC<TodoFormProps> = ({ todos, setTodos }) => {
   const [input, setInput] = useState('');
-  const [count, setCount] = useState(1);
+  const [id, setId] = useState(1);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,13 +17,13 @@ const TodoForm: FC<TodoFormProps> = ({ todos, setTodos }) => {
 
     const newTodo = {
       value: input,
-      id: count,
+      id,
       isChecked: false,
     };
     setTodos([...todos, newTodo]);
 
     setInput('');
-    setCount((prevCount) => prevCount + 1);
+    setId((prevCount) => prevCount + 1);
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +31,7 @@ const TodoForm: FC<TodoFormProps> = ({ todos, setTodos }) => {
   };
 
   return (
-    <form className={styles.todo__form} onSubmit={handleSubmit}>
+    <form className={styles.todo__form} onSubmit={handleSubmit} data-testid="todo-form">
       <input
         className={styles.todo__input}
         type="text"
