@@ -1,16 +1,40 @@
 .todolist {
-  margin-top: 50px;
+  margin-top: 15px;
   width: 600px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 10px 10px 9px 0px rgba(0,0,0,0.41);
 
   @media (max-width: 640px) {
     width: 100%;
   }
+
   .todolist__item {
     border: 1px solid #50514f;
+    border-radius: 5px;
     overflow: hidden;
+    transition: 0.4s ease-in;
+    opacity: 1;
+    margin: 5px 0;
+    background-color: #ffffff;
+    
+    &:first-child {
+      margin-top: 0;
+    }
 
+    &_empty {
+      text-align: center;
+      font-size: 1.6rem;
+      margin: 50px 0;
+    }
     &_hide {
-      display: none;
+      opacity: 0;
+      transform: translateY(600px);
+      position: absolute;
+      width: 500px;
+      height: 50px;
     }
   }
 

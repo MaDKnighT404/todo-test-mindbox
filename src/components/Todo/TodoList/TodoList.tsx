@@ -28,7 +28,9 @@ const TodoList: FC<TodoListProps> = ({ todos, setTodos }) => {
           todos.map((el, i) => (
             <li
               className={`${styles.todolist__item} ${
-                ((activeButton === 'active' && el.isChecked) || (activeButton === 'completed' && !el.isChecked)) && styles.todolist__item_hide
+                ((activeButton === 'active' && el.isChecked) ||
+                  (activeButton === 'completed' && !el.isChecked)) &&
+                styles.todolist__item_hide
               }`}
               key={el.id}
             >
@@ -48,7 +50,7 @@ const TodoList: FC<TodoListProps> = ({ todos, setTodos }) => {
             </li>
           ))
         ) : (
-          <span>1</span>
+          <li className={styles.todolist__item_empty}>Todo list is empty! Try added something </li>
         )}
       </ul>
       <TodoOptions
